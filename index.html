@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+
+
+
+		 	<nav class="blue darken-1">
+				CALCULÁ TU ÍNDICE
+		     <ul id="slide-out" class="side-nav ">
+		     	<li><a href="#!"></a></li>
+					<li><div class="divider"></div></li>
+					<li><a class="waves-effect" href="https://guarani.unc.edu.ar/economicas/" target="_blank"><i class="material-icons">insert_link</i>Guaraní web</a></li>
+				</ul>
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+		  </nav>
+
+		  <div class="row">
+				<div class="input-field col s12">
+					<h6>Completá los campos para calcular tu índice</h6>
+				</div>
+
+		    <form id="calcindice" class="col s12" action="#">
+		      <div class="row">
+
+		        <div class="col s6">
+			      	<p>
+					      <input type="checkbox" id="job" />
+					      <label for="job">¿Trabajas?</label>
+					    </p>
+		          
+		        </div>
+		        <div class="col s6">
+		          <p>
+					      <input type="checkbox" id="child" />
+					      <label for="child">¿Tenés hijos?</label>
+					    </p>
+		        </div>
+		      </div>
+
+	        <div class="input-field col s12">
+	        	<input id="aprobadas" type="number" min="0" step="1" maxlength="2" class="validate">
+	          <label for="aprobadas">¿Cúantas materias tenés aprobadas?</label>
+	        </div>
+
+	        <div class="input-field col s12">
+	          <select id="regular">
+				      <option value="" disabled selected>¿Cúantas materias regularizaste el semestre pasado?</option>
+				      <option value="1">1</option>
+				      <option value="2">2</option>
+				      <option value="3">3</option>
+				      <option value="4">4</option>
+				      <option value="5">5</option>
+				    </select>
+				    <label id="labelregular">¿Cúantas materias regularizaste el semestre pasado?</label>
+	        </div>
+
+	        <div class="input-field col s12">
+	          <select id="inscribiste">
+				      <option value="" disabled selected>¿A cúantas materias te inscribiste?</option>
+				      <option value="1">1</option>
+				      <option value="2">2</option>
+				      <option value="3">3</option>
+				      <option value="4">4</option>
+				      <option value="5">5</option>
+				    </select>
+				    <label id="labelinscribiste">¿A cúantas materias te inscribiste?</label>
+	        </div>
+
+					<div class="input-field col s12">
+	        	<input id="promedio" type="number" min="0" step=".1" max="10" class="validate">
+	          <label for="promedio">Ingresá tu promedio</label>
+	        </div>
+
+	        <div id="error" class="col s12 red-text">
+						Completa los campos!
+	        </div>
+
+					<!-- <button id="configreset" class="btn waves-effect waves-light left blue darken-1" name="configreset">
+									    <i class="material-icons">cached</i>
+									  </button> -->
+
+				  <button id="calcular" class="btn waves-effect waves-light right blue darken-1" name="calcular">CALCULAR
+				    <i class="material-icons right">send</i>
+				  </button>
+		      
+		    </form>
+		  </div>
+	
+			
+			<div id="modal1" class="modal modal-fixed-footer blue darken-1">
+		    <div class="modal-content white-text">
+		    	<h1 class="center-align"><p>Tu índice es</p><p id="total"></p></h1>
+		      
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Listo</a>
+		    </div>
+		  </div>
+
+
+
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+  </html>
