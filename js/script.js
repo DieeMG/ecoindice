@@ -8,6 +8,7 @@ $(document).ready(function() {
 
     $('#labelregular').hide();
     $('#labelinscribiste').hide();
+    $('#noway').hide();
     $('#error').hide();
 
 	$('#regular').on('change', function() {
@@ -18,11 +19,9 @@ $(document).ready(function() {
     	$('#labelinscribiste').fadeIn();
     })
 
-     $('.modal').modal({
-		
+     $('.modal').modal({		
 		startingTop: '0%', // Starting top style attribute
-		endingTop: '0%' // Ending top style attribute
-		
+		endingTop: '0%' // Ending top style attribute		
 	});
 
 	/*$('#configreset').click(function(){
@@ -33,18 +32,19 @@ $(document).ready(function() {
       menuWidth: 250
   	});
 
-
     $(function(){
 		$('#total').hide();
 		$('#calcular').click(function() {
 			total   = $('#total').val();
 
-			job = $('#job');
+			/* fields */
+		    job = $('#job');
 			child = $('#child');
-	        aprobadas = $('#aprobadas').val();
-	        regular = $( "#regular" ).val();
-	        inscribiste = $( "#inscribiste" ).val();
-	        promedio = $( "#promedio" ).val();
+		    aprobadas = $('#aprobadas').val();
+		    regular = $( "#regular" ).val();
+		    inscribiste = $( "#inscribiste" ).val();
+		    promedio = $( "#promedio" ).val();
+
 
 	        if ( job.is(':checked') ) {
 	        	job = 0.15;
@@ -57,15 +57,14 @@ $(document).ready(function() {
 	        } else {
 	        	child = 0;
 	        }
-
 			
-			console.log(job +' + '+ child +' + (0.0063 * '+aprobadas+') + (0.03 * '+regular+') + (0.01*'+promedio+') + (('+regular+' / '+inscribiste+') * 0.3)');
+			//console.log(job +' + '+ child +' + (0.0063 * '+aprobadas+') + (0.03 * '+regular+') + (0.01*'+promedio+') + (('+regular+' / '+inscribiste+') * 0.3)');
 
 			total = job + child + (0.0063*aprobadas) + (0.03*regular) + (0.01*promedio) + ((regular/inscribiste)*0.3);
 
 			total = Math.floor(total * 100) / 100;
 
-			console.log('total '+total);
+			//console.log('total '+total);
 
 			$('#total').text(total);
 			$('#total').fadeIn();
@@ -77,11 +76,7 @@ $(document).ready(function() {
 				$('#modal1').modal('open');	
 			}
 			
-		}); 
+		});
 	});
 
-    
-
 });
-
-
