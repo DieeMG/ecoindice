@@ -74,7 +74,7 @@ $(document).ready(function() {
 				$('#error').fadeIn();
 			} else {
 				$('#error').hide();
-				$('#total').fadeIn();
+				$('#modal1').modal('open');	
 			}
 			
 		}); 
