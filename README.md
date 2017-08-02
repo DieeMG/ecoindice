@@ -1,1 +1,1 @@
-# tuce
+App para calcular índice
