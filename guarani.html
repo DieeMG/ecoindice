@@ -8,12 +8,6 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<script type="text/javascript">
-		function redireccionar(){
-		  window.location="index.html";
-		} 
-		setTimeout ("redireccionar()", 4000); //tiempo expresado en milisegundos
-		</script>
       <style type="text/css">
       	.modal {max-height: 100%; width:100%; height:100%!important; }
       </style>
@@ -27,15 +21,17 @@
 		     	<li><a href="#!"></a></li>
 					<li><div class="divider"></div></li>
 					<li><a class="waves-effect" href="index.html"><i class="material-icons left">home</i>Inicio</a></li>
-					<li><a class="waves-effect" href="https://guarani.unc.edu.ar/economicas/" target="_blank"><i class="material-icons left">insert_link</i>Guaraní web</a></li>
+					<li><a class="waves-effect" href="indice.html"><i class="material-icons left">insert_link</i>Tabla de Índices</a></li>
+					<li><a class="waves-effect" href="https://forms.todopago.com.ar/formulario/commands?command=formulario&m=44b661fbf51eb31bea14b098e5112f10#utm_source=186019&utm_medium=boton_de_pago&utm_campaign=web" target="_blank">
+					<i class="material-icons left">local_cafe</i>Invitanos un café!</a></li>
 				</ul>
 				<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-			</nav>
+		  	</nav>
 
-		  	<div class="row">
-				<div class="input-field col s12">
-					<h4>Gracias por tu donación, el pago fue aceptado.<br>Pronto seras redirecciónado automaticamente al Home.</h4><a href="index.html">Click para ir a Home</a>
-				</div>
+			<div class="row">
+				
+					<!--<iframe width="100%" height="100%" src="https://guarani.unc.edu.ar/economicas/"></iframe>-->
+					<object type="text/html" data="https://guarani.unc.edu.ar/economicas/" width="100%" height="100%"></object>
 			</div>
 
       <!--Import jQuery before materialize.js-->
