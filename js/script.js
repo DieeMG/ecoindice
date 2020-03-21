@@ -40,6 +40,7 @@ $(document).ready(function() {
 			/* fields */
 		    job = $('#job');
 			child = $('#child');
+			beca = $('#beca');
 		    aprobadas = $('#aprobadas').val();
 		    regular = $( "#regular" ).val();
 		    inscribiste = $( "#inscribiste" ).val();
@@ -47,22 +48,30 @@ $(document).ready(function() {
 
 
 	        if ( job.is(':checked') ) {
-	        	job = 0.15;
+	        	job = 1 * 0.2;
 	        } else {
 	        	job = 0;
 	        }
 
 	        if ( child.is(':checked') ) {
-	        	child = 0.05;
+	        	child = 1 * 0.2;
 	        } else {
 	        	child = 0;
+	        }
+
+	        if ( beca.is(':checked') ) {
+	        	beca = 1 * 0.1;
+	        } else {
+	        	beca = 0;
 	        }
 			
 			//console.log(job +' + '+ child +' + (0.0063 * '+aprobadas+') + (0.03 * '+regular+') + (0.01*'+promedio+') + (('+regular+' / '+inscribiste+') * 0.3)');
 
-			total = job + child + (0.0063*aprobadas) + (0.03*regular) + (0.01*promedio) + ((regular/inscribiste)*0.3);
+			total = beca + job + child + (aprobadas * 0.2/41) + (0.01*promedio)+  (regular * 0.2/3);
 
-			total = Math.floor(total * 100) / 100;
+			//total = job + child + (0.0063*aprobadas) + (0.03*regular) + (0.01*promedio) + ((regular/inscribiste)*0.3);
+
+			total = Math.floor(total * 1000) / 1000;
 
 			//console.log('total '+total);
 
