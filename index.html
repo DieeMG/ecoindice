@@ -1,132 +1,277 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOíndice - Calcula tu índice</title>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+</head>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<body>
+	<header>
+		<div class="navbar-fixed">
+			<nav class="cyan nav-extended">
+				<div class="nav-wrapper">
+					<a href="#" class="brand-logo font-eco center">ECOíndice</a>
+				</div>
+				<div class="nav-content">
+					<ul class="tabs tabs-fixed-width col s12 tabs-transparent">
+						<li class="tab col s4"><a class="active" href="#calculadora">Calcular</a></li>
+						<li class="tab col s4"><a href="#tabla-indice">Tabla de indices</a></li>
+						<li class="tab col s4"><a href="#guarani">Guaraní</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
 
-      <style type="text/css">
-      	.modal {max-height: 100%; width:100%; height:100%!important; }
-      </style>
-    </head>
-
-    <body>
-
-		 	<nav class="teal">
-				<a href="index.html">ECOíndice</a>
-		     <ul id="slide-out" class="side-nav ">
-		     	<li><a href="#!"></a></li>
-					<li><div class="divider"></div></li>
-					<li><a class="waves-effect" href="indice.html"><i class="material-icons left">insert_link</i>Tabla de Índices</a></li>
-					<li><a class="waves-effect" href="https://guarani.unc.edu.ar/economicas/"><i class="material-icons left">insert_link</i>Guaraní web</a></li>
-					<!--<li><a class="waves-effect" href="whatsapp://send?text=https://play.google.com/store/apps/details?id=com.devacid.ecoindice" data-action="share/whatsapp/share"><i class="material-icons left">share</i>Compartir App</a></li>-->
-					<!--<li><a class="waves-effect" href="https://forms.todopago.com.ar/formulario/commands?command=formulario&m=44b661fbf51eb31bea14b098e5112f10#utm_source=186019&utm_medium=boton_de_pago&utm_campaign=web" target="_blank">
-					<i class="material-icons left">local_cafe</i>Invitanos un café!</a></li>-->
-				</ul>
-				<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-		  </nav>
-
-		  <div class="row">
+	<main>
+		<section id="calculadora" class="col s12 mt">
+			<div class="container ">
 				<div class="input-field col s12">
-					<h5>Completá los campos para calcular tu índice</h5>
+					<h1>Completá los campos para calcular tu índice</h1>
 					<h6>(Utiliza los datos hasta el turno de examen previo a las inscripciones)</h6>
 				</div>
+				<div class="row">
+					<form>
+						<div class="row center">
 
-		    <form class="col s12">
-		      <div class="row">
+							<div class="col s4">
+								<p>
+									<label for="job">
+										<input type="checkbox" class="filled-in" id="job" />
+										<span for="job">¿Trabajas?</span>
+									</label>
+								</p>		          
+							</div>
 
-		        <div class="col s3">
-			      	<p>
-					      <input type="checkbox" id="job" />
-					      <label for="job">¿Trabajas?</label>
-					    </p>
-		          
-		        </div>
-		        <div class="col s3">
-		          <p>
-					      <input type="checkbox" id="child" />
-					      <label for="child">¿Tenés hijos?</label>
-					    </p>
-		        </div>
-		        <div class="col s3">
-		          <p>
-					      <input type="checkbox" id="beca" />
-					      <label for="beca">¿Cobras beca?</label>
-					    </p>
-		        </div>
-		      </div>
-	        <div class="input-field col s12">
-	        	<input id="aprobadas" type="number" min="0" step="1" maxlength="2" class="validate">
-	          <label for="aprobadas">¿Cúantas materias tenés aprobadas? (Sumar CN)</label>
-	        </div>
+							<div class="col s4">
+								<p>
+									<label for="child">
+										<input type="checkbox" class="filled-in" id="child" />
+										<span for="child">¿Tenés hijos?</span>
+									</label>
+								</p>
+							</div>
+							
+							<div class="col s4">
+								<p>
+									<label for="beca">
+										<input type="checkbox" class="filled-in" id="beca" />
+										<span for="beca">¿Cobras beca?</span>
+									</label>
+								</p>
+							</div>
+						
+						</div>
 
-	        <div class="input-field col s12">
-	          <select id="regular">
-				      <option value="" disabled selected>¿Cúantas materias regularizaste el semestre pasado?</option>
-				      <option value="0">0</option>
-				      <option value="1">1</option>
-				      <option value="2">2</option>
-				      <option value="3">3</option>
-				      <option value="4">4</option>
-				      <option value="5">5</option>
-				    </select>
-				    <label id="labelregular">¿Cúantas materias regularizaste el semestre pasado?</label>
-	        </div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="aprobadas" type="number" min="0" step="1" maxlength="2" class="validate">
+								<label for="aprobadas">¿Cúantas materias tenés aprobadas?</label>
+								<span class="helper-text">Tambien sumar aprobados del ciclo de nivelación</span>
+							</div>
+						</div>
 
-	       <!--  <div class="input-field col s12">
-	          <select id="inscribiste">
-				      <option value="" disabled selected>¿En cúantas materias te inscribiste el semestre pasado?</option>
-				      <option value="0">0</option>
-				      <option value="1">1</option>
-				      <option value="2">2</option>
-				      <option value="3">3</option>
-				      <option value="4">4</option>
-				      <option value="5">5</option>
-				    </select>
-				    <label id="labelinscribiste">¿En cúantas materias te inscribiste el semestre pasado?</label>
-	        </div>
+						<div class="row">
+							<div class="input-field col s12">
+								<select id="regular">
+									<option value="" disabled selected>¿Cúantas materias regularizaste el semestre pasado?</option>
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>	
+								<label id="labelregular">¿Cúantas materias regularizaste el semestre pasado?</label>
+							</div>				
+						</div>
 
-	        <div id="noway" class="red-text">
-	        	!¿Cómo vas a regularizar más materias de las que te inscribiste?!!
-	        </div> -->	
+<!-- 							<div class="row">
+							<div class="input-field col s12">
+								<select id="inscribiste">
+									<option value="" disabled selected>¿En cúantas materias te inscribiste el semestre pasado?</option>
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+								<label id="labelinscribiste">¿En cúantas materias te inscribiste el semestre pasado?</label>
+							</div>				
+						</div>
 
-					<div class="input-field col s12">
-	        	<input id="promedio" type="number" min="0" step=".1" max="10" class="validate">
-	          <label for="promedio">Ingresá tu promedio con aplazos</label>
-	        </div>
+						<div id="noway" class="red-text">
+							!No podes regularizar más materias de las que te inscribiste!
+						</div> -->
 
-	        <div id="error" class="col s12 red-text">
-						Completa los campos!
-	        </div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="promedio" type="number" min="0" step=".1" max="10" class="validate">
+								<label for="promedio">Ingresá tu promedio con aplazos</label>
+							</div>
+						</div>
 
-					<!-- <button id="configreset" class="btn waves-effect waves-light left blue darken-1" name="configreset">
-				    <i class="material-icons">cached</i>
-				  </button> -->	
+						<div id="error" class="col s12 red-text">
+								Completa los campos!
+						</div>  
+						
+						<button id="calcular" class="btn  waves-effect waves-light right cyan" name="calcular" >calcular <i class="material-icons right">send</i></button>
+						
+					</form>
+				</div>
+			</div>
+			
+			<div id="modal1" class="modal modal-fixed-footer cyan">
+				<div class="modal-content white-text">
+						<h3 class="center-align"><p>Tu índice es:</p><p id="total"></p></h3>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-action modal-close waves-effect waves-cyan btn-flat ">Listo</a>
+				</div>
+			</div>		 
+		</section>
+		
+		<section id="tabla-indice" class="col s12 mt">
+			<div class="container">
+				<div class="row">
+					<div class="center col s12">
+						<h2>En la siguiente tabla podes ver el coeficiente necesario para poder inscribirte en cada catedra.</h2>
+					</div>
+				</div>
+				<div class="row"></div>
+					<div class="col s12">
+						<table class="striped">
+						<thead>
+							<tr>
+							<th>Materia</th>
+							<th>Catedra</th>
+							<th>Turno</th>
+							<th>Coeficiente</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
 
-					<p id="calcular" class="btn waves-effect waves-light right teal" name="calcular">CALCULAR
-				    <i class="material-icons right">send</i>
-				  </p>
-		    </form>
-				  
-		  </div>		 
+									<td>Sin datos actuales.</td>
+									<td>Sin datos actuales.</td>
+									<td>Sin datos actuales.</td>
+									<td>Sin datos actuales.</td>
 
-			<div id="modal1" class="modal modal-fixed-footer teal">
-		    <div class="modal-content white-text">
-		    	 <h1 class="center-align"><p>Tu índice es</p><p id="total"></p></h1>
-		      
-		    </div>
-		    <div class="modal-footer">
-		      <a href="#!" class="modal-action modal-close waves-effect waves-teal btn-flat ">Listo</a>
-		    </div>
+							</tr>
+						</tbody>
+
+<!-- 						<tbody>
+							<tr>
+							<td>Costos y Gestion 1</td>
+							<td>David</td>
+							<td>Noche</td>
+							<td>0.24</td>
+							</tr>
+							<tr>
+							<td>Finanzas Publicas</td>
+							<td>Freille</td>
+							<td>Mañana</td>
+							<td>0.26</td>
+							</tr>
+							<tr>
+							<td>Finanzas Publicas</td>
+							<td>Garzon</td>
+							<td>Noche</td>
+							<td>0.27</td>
+							</tr>
+							<tr>
+							<td>Contabilidad III</td>
+							<td>Quadro</td>
+							<td>Mañana</td>
+							<td>0.26</td>
+							</tr>
+							<tr>
+							<td>Macroeconomia I</td>
+							<td>Cristina</td>
+							<td>Mañana</td>
+							<td>0.33</td>
+							</tr>
+							<tr>
+							<td>Derecho Constitucional y Administrativo</td>
+							<td>Ferreyra</td>
+							<td>Mañana</td>
+							<td>0.25</td>
+							</tr>
+							<tr>
+							<td>Estadistica I</td>
+							<td>Casini</td>
+							<td>Mañana</td>
+							<td>0.19</td>
+							</tr>
+							<tr>
+							<td>Estadistica I</td>
+							<td>Moneta Pizarro</td>
+							<td>Noche</td>
+							<td>0.24</td>
+							</tr>
+							<tr>
+							<td>Matematica Financiera</td>
+							<td>Andonian</td>
+							<td>Tarde</td>
+							<td>0.25</td>
+							</tr>
+							<tr>
+							<td>Matematica Financiera</td>
+							<td>Tolosa</td>
+							<td>Noche</td>
+							<td>0.16</td>
+							</tr>
+							<tr>
+							<td>Analisis de Estados Contables</td>
+							<td>Arnoletto</td>
+							<td>Noche</td>
+							<td>0.17</td>
+							</tr>
+						</tbody> -->
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="guarani" class="col s12 mt vh100">
+			<iframe style="width: 100%; height: 100%; overflow: hidden;" src="https://autogestion.guarani.unc.edu.ar" width="100%" height="100%" scrolling="no">Iframes not supported</iframe>
+		</section>
+
+	</main>
+
+	<footer>
+		<div class="fixed-action-btn">
+			<a class="btn-floating btn-large black">
+			  <i class="large material-icons">add</i>
+			</a>
+			<ul>
+			  <li><a href="https://play.google.com/store/apps/details?id=com.devacid.ecoindice" target="_blank" class="btn-floating cyan" title="¡Calificanos en Google Play!" ><i class="material-icons">shop</i></a></li>
+			  <li><a href="mailto:dmgelvez+ei@gmail.com?subject=Consulta%20ECO%C3%ADndice" class="btn-floating cyan" title="¡Contactanos por email!"><i class="material-icons">email</i></a></li>
+			  <li><a href="#" class="btn-floating cyan" title="¡Dona un Cafecito!"><i class="material-icons">payment</i></a></li>
+			</ul>
 		  </div>
+	</footer>
 
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/script.js"></script>
-    </body>
-  </html>
+
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+</html>
