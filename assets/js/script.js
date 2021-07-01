@@ -7,17 +7,17 @@ $(document).ready(function() {
     /**/
 
     $('#labelregular').hide();
-    $('#labelinscribiste').hide();
-    $('#noway').hide();
+/*     $('#labelinscribiste').hide();
+    $('#noway').hide(); */
     $('#error').hide();
 
 	$('#regular').on('change', function() {
     	$('#labelregular').fadeIn();
     })
 	
-	$('#inscribiste').on('change', function() {
+/* 	$('#inscribiste').on('change', function() {
     	$('#labelinscribiste').fadeIn();
-    })
+    }) */
 
      $('.modal').modal({		
 		startingTop: '0%', // Starting top style attribute
@@ -39,8 +39,8 @@ $(document).ready(function() {
 			child = $('#child');
 			beca = $('#beca');
 		    aprobadas = $('#aprobadas').val();
-		    regular = $( "#regular" ).val();
-		    inscribiste = $( "#inscribiste" ).val();
+		    regular = $( "#regular" ).val();/* 
+		    inscribiste = $( "#inscribiste" ).val(); */
 		    promedio = $( "#promedio" ).val();
 
 
