@@ -31,7 +31,8 @@ $(document).ready(function() {
 
     $(function(){
 		$('#total').hide();
-		$('#calcular').click(function() {
+		$('#calcular').click(function(e) {
+			e.preventDefault();
 			total   = $('#total').val();
 
 			/* fields */
